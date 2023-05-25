@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-awba
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-awba
+    app.kubernetes.io/part-of: e2e-nodejs
+  name: devfile-sample-awba
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-awba
+status:
+  loadBalancer: {}
